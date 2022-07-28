@@ -9,12 +9,12 @@
 [![License](https://img.shields.io/github/license/GitGuardian/ggshield-action?color=%231B2D55&style=for-the-badge)](LICENSE)
 ![GitHub stars](https://img.shields.io/github/stars/gitguardian/ggshield-action?color=%231B2D55&style=for-the-badge)
 
-Find exposed credentials in your commits using [**GitGuardian shield**](https://github.com/GitGuardian/ggshield).
+Find exposed credentials in your commits using [**GitGuardian Shield**](https://github.com/GitGuardian/ggshield).
 
-The **GitGuardian shield** (ggshield) is a CLI application that runs in your local environment
+The **GitGuardian Shield** (ggshield) is a CLI application that runs in your local environment
 or in a CI environment to help you detect more than 200 types of secrets, as well as other potential security vulnerabilities or policy breaks.
 
-**GitGuardian shield** uses our [public API](https://api.gitguardian.com/doc) through [py-gitguardian](https://github.com/GitGuardian/py-gitguardian) to scan your files and detect potential secrets or issues in your code. **The `/v1/scan` endpoint of the [public API](https://api.gitguardian.com/doc) is stateless. We will not store any files you are sending or any secrets we have detected**.
+**GitGuardian Shield** uses our [public API](https://api.gitguardian.com/doc) through [py-gitguardian](https://github.com/GitGuardian/py-gitguardian) to scan your files and detect potential secrets or issues in your code. **The `/v1/scan` endpoint of the [public API](https://api.gitguardian.com/doc) is stateless. We will not store any files you are sending or any secrets we have detected**.
 
 ## Requirements
 
@@ -67,7 +67,7 @@ Options:
                   to set this option.
 
   --all-policies  Present fails of all policies (Filenames, FileExtensions,
-                  Secret Detection).By default, only Secret Detection is
+                  Secret Detection). By default, only Secret Detection is
                   shown.
 
   -v, --verbose   Verbose display mode.
@@ -105,11 +105,11 @@ jobs:
 
 ![Scan output example](https://cdn.statically.io/gh/GitGuardian/ggshield-action/51c86f8a/doc/example_output.png)
 
-This a sample scan result from **GitGuardian shield**.
+This a sample scan result from **GitGuardian Shield**.
 
-If the secret detected has been revoked and you do not wish to rewrite git history, you can use a value of the policy break (for example: the value of `|_password_|`) or the ignore SHA displayed in your `.gitguardian.yaml` under `matches-ignore`.
+If the secret detected has been revoked and you do not wish to rewrite the git history, you can use a value of the policy break (for example: the value of `|_password_|`) or the ignore SHA displayed in your `.gitguardian.yaml` under `matches-ignore`.
 
-An example configuration file is available [here](https://github.com/GitGuardian/ggshield/blob/main/.gitguardian.example.yml).
+An example of a configuration file is available [here](https://github.com/GitGuardian/ggshield/blob/main/.gitguardian.example.yml).
 
 ![Status example](https://cdn.statically.io/gh/GitGuardian/ggshield-action/51c86f8a/doc/status.png)
 
